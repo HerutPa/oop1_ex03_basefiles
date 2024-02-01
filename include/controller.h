@@ -1,28 +1,26 @@
-//#pragma once
-//
-//#include <SFML/Graphics.hpp>
-//#include <vector>
-//#include <fstream>
-//#include "Board.h"
-////#include "ToolBar.h"
-//
-//
-//class Controller
-//{
-//public:
-//    Controller();
-//    void run();
-//    void init();
-//
-//
-//private:
-//
-//    //members
-//    sf::RenderWindow m_window;
-//    //std::vector< std::vector <char> > m_matrix;
-//    Board m_board;
-//    //ToolBar m_ToolBar;
-//    sf::Texture m_background;
-//    std::ifstream m_ifile = std::ifstream("Board.txt");
-//    std::ofstream m_ofile;
-//};
+#pragma once
+
+#include <SFML/Graphics.hpp>
+#include <vector>
+#include <fstream>
+#include "Board.h"
+//#include "ToolBar.h"
+
+
+class Controller
+{
+public:
+    Controller();
+    void run();
+    void init();
+
+
+private:
+    //Board m_board;
+    sf::RenderWindow m_window;
+    sf::Texture m_background;
+    std::ifstream m_ifile = std::ifstream("Board.txt");
+    std::ofstream m_ofile;
+
+    //ToolBar m_ToolBar;
+};

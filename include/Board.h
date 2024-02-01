@@ -1,24 +1,24 @@
-//#pragma once
-//
-//#include <SFML/Graphics.hpp>
-//#include <iostream>
-//#include "Row.h"
-//
-//
-//class Board
-//{
-//public:
-//	Board(int row, int col);
-//	//void setCol(int);
-//	//void setRow(int);
-//	int getCol();
-//	int getRow();
-//	void setSize();
-//	void init();
-//
-//private:
-//	int m_row;
-//	int m_col;
-//	Row m_rowClass;
-//	std::vector<std::vector<Row>> m_matrixVector;
-//};
+#pragma once
+
+#include <SFML/Graphics.hpp>
+#include <iostream>
+#include "Row.h"
+
+
+class Board
+{
+public:
+	Board(int, int);
+	/*void setCol(int);
+	void setRow(int);*/
+	//void init(int, int);
+	int getCol();
+	int getRow();
+	void setSize();
+
+private:
+	int m_row;
+	int m_col;
+	Tile m_tile; 
+	std::vector<std::vector<Row>> m_matrixVector;
+};

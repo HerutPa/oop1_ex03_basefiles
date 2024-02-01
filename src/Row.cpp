@@ -1,11 +1,10 @@
-//#include "Row.h"
-//
-//Row::Row(int size_col)
-//{
-//	tile* m_tiles = new tile[size_col];
-//	for (int i = 0; i < size_col; i++)
-//	{
-//		m_tiles[i] = Tile.setTile();
-//	}
-//}
-//
+#include "Row.h"
+
+Row::Row(int size, const Tile& value)
+{
+	m_ptr = new Tile[size];
+	for (int i = 0; i < size; i++)
+	{
+		m_ptr[i] = value;
+	}
+}
