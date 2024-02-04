@@ -1,6 +1,6 @@
 //#include "Row.h"
 //
-//Row::Row(int size, const sf::RectangleShape& value)
+//Row::Row (int size, const sf::RectangleShape& value)
 //{
 //    m_size = size;
 //	m_cell = new sf::RectangleShape[size]();
@@ -10,29 +10,9 @@
 //        auto cellsize = value.getSize();
 //
 //        m_cell[i] = value;
-//        m_cell[i].setPosition(startPosition.x + cellsize.x * i, startPosition.y );
-//		
-//		
-//        //m_rec.setSize(sf::Vector2f(50.f, 50.f));
-//        //m_rec.setPosition((float)((1000 - totalRows * 50.f) / 2 + (row * 50.f)),
-//         //   (float)((900 - totalCols * 50.f) / 2 + (col * 50.f)));
-//
-//     //   m_rec.setOutlineColor(sf::Color::Color(102, 102, 102));
-//     //   m_rec.setOutlineThickness(1.f);
-//     //   m_rec.setFillColor(sf::Color::Transparent);
+//        m_cell[i].setPosition(startPosition.x + cellsize.x * i, startPosition.y );		
 //    }
 //}
-//
-////void initRow()
-////{
-////    auto startPosition = value.getPosition();
-////    auto cellsize = value.getSize();
-////    for (int i = 0; i < m_size; i++)
-////    {
-////        m_cellBoard[i] = value;
-////        m_cellBoard[i].setPosition({ startPostion.x + cellSize.x * i, startPosition.y });
-////    }
-////}
 //
 //// בנאי העתקה
 //Row::Row(const Row& other) : m_size(other.m_size)

@@ -7,40 +7,49 @@
 //	for (int row = 0; row < m_row; row++)
 //	{
 //		m_rec.setSize((sf::Vector2f(50.f, 50.f)));
-//		//auto rec = sf::RectangleShape(SIZE_OF_CELL);             
-//		m_rec.setPosition(float((1000 - m_row * 50.f) / 2 + (row * 50.f)),
-//			float((900 - m_col * 50.f) / 2 + (col * 50.f)));
+//		//auto rec = sf::RectangleShape(SIZE_OF_CELL);
 //
-////		initRow(m_col, m_rec);
+//        m_rec.setOutlineColor(sf::Color::Color(102, 102, 102));
+//        m_rec.setOutlineThickness(1.f);
+//        m_rec.setFillColor(sf::Color::Transparent);
+//               
+//	    Row m_cellBoard(getCol(), getMRec());
+//		m_matrixVector[row].push_back(m_cellBoard);
+//		
 //	}
 //}
 //
 //
 //
+//void Board::SetRow(const int row)
+//{
+//	m_row = row;
+//}
 //
-//
-//
-//
-//
-//int Board::getCol()
+//void Board::SetCol(const int col)
+//{
+//	m_col = col;
+//}
+//const int Board::getCol()
 //{
 //	return m_col;
 //}
 //
-//int Board::getRow()
+//const int Board::getRow()
 //{
 //	return m_row;
 //}
+//
 //
 //void Board::setSize()
 //{
 //	std::cout << "please enter row and col: ";
 //	std::cin >> m_row >> m_col;
-//	while (m_col > 18 || m_row > 20 || m_col < 1 || m_row < 1) // correct the size
-//	{
-//		std::cout << "the maximum c/r size is 1-18/1-20 please enter again col and row: ";
-//		std::cin >> m_row >> m_col;
-//	}
+//}
+//
+//sf::RectangleShape& Board::getMRec()
+//{
+//	return m_rec;
 //}
 //
 //
