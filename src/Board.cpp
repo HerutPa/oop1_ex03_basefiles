@@ -16,7 +16,7 @@ Board::Board(int row, int col)
 	    Row m_cellBoard(getCol(), getMRec());
 		m_matrixVector[row].push_back(m_cellBoard);
 		InitTextures();
-		
+		ó
 	}
 }
 
