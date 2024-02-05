@@ -15,19 +15,20 @@ Board::Board(int row, int col)
                
 	    Row m_cellBoard(getCol(), getMRec());
 		m_matrixVector[row].push_back(m_cellBoard);
+		InitTextures();
 		
 	}
 }
 
 void Board::InitTextures()
 {
-	m_textures[WALL].loadFromFile("wall.jpg");
-	m_textures[DOOR].loadFromFile("door.png");
-	m_textures[CAT].loadFromFile("cat.png");
-	m_textures[MOUSE].loadFromFile("mouse.png");
-	m_textures[CHEESE].loadFromFile("sheese.png");
-	m_textures[PRESENT].loadFromFile("present.png");
-	m_textures[KEY].loadFromFile("key.png");
+	//m_textures[WALL].loadFromFile("wall.jpg");
+	//m_textures[DOOR].loadFromFile("door.png");
+	//m_textures[CAT].loadFromFile("cat.png");
+	//m_textures[MOUSE].loadFromFile("mouse.png");
+	//m_textures[CHEESE].loadFromFile("sheese.png");
+	//m_textures[PRESENT].loadFromFile("present.png");
+	//m_textures[KEY].loadFromFile("key.png");
 }
 
 const sf::RectangleShape Board::CreateRectangle(const int row, const int col) const
@@ -87,7 +88,6 @@ void Board::initMatrix()
 	for (auto& row : m_matrixVector) //קח מצביע לתוך הוקטור ותעבור שורה שורה
 	{
 		Row temp_row(m_col); //יצירת שורה ריקה
-
 		row.operator= (temp_row) ; //הכנסו את השורה לתוך הוקטור
 
 		/*std::vector < char > vector_row;
@@ -98,5 +98,3 @@ void Board::initMatrix()
 		m_matrix.push_back(vector_row);*/
 	}
 }
-
-

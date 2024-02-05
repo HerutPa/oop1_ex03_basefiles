@@ -30,13 +30,11 @@ void Controller::init()
         m_ifile >> row >> col;
         m_board.SetRow(row);
         m_board.SetCol(col);
-        //m_board(row, col); 
         initWithGivenMatrix();//reset the matrix with the file
     }
     else
     {
         m_board.setSize();
-        //m_board initMatrix();
         m_board.initMatrix();
     }
 
@@ -64,29 +62,17 @@ void Controller::initWithGivenMatrix()
     }
 
 }
-void Controller::initMatrix()
-{
-    // initial the matrix with char ' ' to create empty board
-    for (int row = 0; row < m_board.getRow(); ++row)
-    {
-        std::vector < char > vector_row;
-        for (int col = 0; col < m_board.getCol(); ++col)
-        {
-            vector_row.push_back(' ');
-        }
-        m_matrix.push_back(vector_row);
-    }
-}
-void Board::init()
-{
-    for (int row = 0; row < m_row; ++row)
-    {
-        std::vector < sf::RectangleShape > vector_row;
-        for (int col = 0; col < m_col; ++col)
-        {
-            vector_row.push_back(CreateRectangle(row, col)); // create the corrent row
-        }
-        m_RectangleMatrix.push_back(vector_row); // push the vector to the vector
-    }
-    InitTextures();
-}
+//void Controller::initMatrix()
+//{
+//    // initial the matrix with char ' ' to create empty board
+//    for (int row = 0; row < m_board.getRow(); ++row)
+//    {
+//        std::vector < char > vector_row;
+//        for (int col = 0; col < m_board.getCol(); ++col)
+//        {
+//            vector_row.push_back(' ');
+//        }
+//        m_matrix.push_back(vector_row);
+//    }
+//}
+

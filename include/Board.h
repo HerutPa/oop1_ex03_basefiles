@@ -30,8 +30,6 @@ public:
 private:
 	int m_row;
 	int m_col;
-	Tile m_tile; 
-	//std::vector<std::vector<Row>> m_matrixVector;
 	std::vector< Row> m_matrixVector;
 	sf::RectangleShape* m_cellBoard;
 	sf::RectangleShape m_rec;
