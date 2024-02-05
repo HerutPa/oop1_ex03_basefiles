@@ -15,6 +15,27 @@ Row::Row (int size, const sf::RectangleShape& value)
     }
 }
 
+Row::Row(int size)
+{
+    m_size = size;
+    m_char = new char[m_size];
+    for (int i = 0; i < m_size; i++)
+    {
+        m_char[i] = ' ';
+    }
+    ////m_cell = new sf::RectangleShape[size]();
+    //for (int i = 0; i < m_size; i++)
+    //{
+    //    auto startPosition = value.getPosition();
+    //    auto cellsize = value.getSize();
+
+    //    m_cell[i] = value;
+    //    m_cell[i].setPosition(startPosition.x + cellsize.x * i, startPosition.y);
+
+    //}
+}
+
+
 // בנאי העתקה
 Row::Row(const Row& other) : m_size(other.m_size)
 {
@@ -33,8 +54,11 @@ Row& Row::operator=(const Row& other)
         delete[] m_cell; // שחרור זיכרון ישן
         m_size = other.m_size;
         m_cell = new sf::RectangleShape[m_size];
-        for (int i = 0; i < m_size; i++) {
+        m_char = new char[m_size];
+        for (int i = 0; i < m_size; i++)
+        {
             m_cell[i] = other.m_cell[i];
+            m_char[i] = other.m_char[i];
         }
     }
     return *this;

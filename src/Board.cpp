@@ -79,4 +79,24 @@ sf::RectangleShape& Board::getMRec()
 }
 
 
+void Board::initMatrix()
+{
+	// initial the matrix with char ' ' to create empty board
+	m_matrixVector.clear();
+	m_matrixVector.resize(m_row);
+	for (auto& row : m_matrixVector) //קח מצביע לתוך הוקטור ותעבור שורה שורה
+	{
+		Row temp_row(m_col); //יצירת שורה ריקה
+
+		row.operator= (temp_row) ; //הכנסו את השורה לתוך הוקטור
+
+		/*std::vector < char > vector_row;
+		for (int col = 0; col < m_col; ++col)
+		{
+			vector_row.push_back(' ');
+		}
+		m_matrix.push_back(vector_row);*/
+	}
+}
+
 

@@ -9,6 +9,7 @@ class Row
 {
 public:
 	Row(int, const sf::RectangleShape& value);
+	Row(int size);
 	Row(const Row& other);
 	Row& operator=(const Row& other);
 	//void init();
@@ -30,6 +31,6 @@ private:
 	
 	sf::RectangleShape m_cellBoard;
 	int m_size;
-
+	char *m_char;
 };
 

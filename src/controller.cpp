@@ -36,7 +36,8 @@ void Controller::init()
     else
     {
         m_board.setSize();
-        initMatrix();
+        //m_board initMatrix();
+        m_board.initMatrix();
     }
 
     m_board.init();
@@ -48,6 +49,8 @@ void Controller::init()
 void Controller::initWithGivenMatrix()
 {
     m_ifile.get(); // for \n
+
+    m_board.readBoard();
     for (int row = 0; row < m_board.getRow(); ++row)
     {
         m_board.getMRec().setSize((sf::Vector2f(50.f, 50.f)));
