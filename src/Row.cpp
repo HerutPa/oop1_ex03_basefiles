@@ -1,5 +1,9 @@
 #include "Row.h"
 
+Row::Row()
+{
+}
+
 Row::Row (int size, const sf::RectangleShape& value)
 {
     m_size = size;
@@ -65,7 +69,8 @@ Row& Row::operator=(const Row& other)
 }
 
 // יוסיף איבר לסוף השורה
-void Row::push_back(const sf::RectangleShape& value) {
+void Row::push_back(const sf::RectangleShape& value) 
+{
     sf::RectangleShape* newData = new sf::RectangleShape[m_size + 1];
     for (int i = 0; i < m_size; ++i) {
         newData[i] = m_cell[i];
@@ -82,9 +87,18 @@ const sf::RectangleShape& Row::at(int index) const
     return m_cell[index];
 }
 
-// קבלת ערך במיקום נתון לכתיבה
-sf::RectangleShape& Row::at(int index) {
-    return m_cell[index];
+// קבלת ערך במיקום נתון
+const char Row::getChar(int index) const
+{
+    return m_char[index];
+}
+
+// קבלת ערך במיקום נתון
+void Row::writeOnIndex(int index, char obj)
+{
+    m_char[index] = obj;
+
+
 }
 
 // קבלת גודל השורה

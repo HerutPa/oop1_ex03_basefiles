@@ -3,11 +3,12 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <vector>
-#include "Tile.h"
 
 class Row
 {
 public:
+
+	Row();
 	Row(int, const sf::RectangleShape& value);
 	Row(int size);
 	Row(const Row& other);
@@ -16,6 +17,8 @@ public:
 	//explicit Row(int size, const sf::RectangleShape& value);
 	void push_back(const sf::RectangleShape& value);
 	const sf::RectangleShape& at(int index) const;
+	const char getChar(int index) const;
+	void writeOnIndex(int index, char obj);
 	sf::RectangleShape& at(int index);
 
 	int getSize() const;
