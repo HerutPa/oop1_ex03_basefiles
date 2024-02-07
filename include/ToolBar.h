@@ -19,7 +19,7 @@ public:
 private:
     float m_col, m_row;
     sf::RectangleShape m_outline;
- /*   Wall m_wall;
+    Wall m_wall;
     Door m_door;
     Cat m_cat;
     Mouse m_mouse;
@@ -28,10 +28,10 @@ private:
     Key m_key;
     Erase m_erase;
     Reset m_reset;
-    Save m_save;*/
+    Save m_save;
 
     ////buttons array
-    //Button* m_botton[10] = { &m_wall, &m_door, &m_cat, &m_pacman,&m_cookie,
-    //                        &m_present, &m_key, &m_erase, &m_reset, &m_save };
+    Button* m_botton[10] = { &m_wall, &m_door, &m_cat, &m_mouse,&m_cheese,
+                            &m_present, &m_key, &m_erase, &m_reset, &m_save };
 
 };

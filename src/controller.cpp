@@ -51,7 +51,7 @@ void Controller::init()
     }
 
     m_window.setSize(sf::Vector2u(1200, 900));
-    m_ToolBar.SetSize(200, 900);
-    //m_ToolBar.init();
+    m_toolBar.SetSize(200, 900);
+    m_toolBar.init();
     }
 

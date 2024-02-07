@@ -11,7 +11,7 @@
 class Board
 {
 public:
-	const sf::RectangleShape CreateRectangle(const int row, const int col) const;
+	//const sf::RectangleShape CreateRectangle(const int row, const int col) const;
 	void SetRow(const int row);
 	void SetCol(const int col);
 
@@ -21,9 +21,7 @@ public:
 	sf::RectangleShape& getMRec();
 	Board();
 	void initMatrix();
-	void init();
 
-	void InitTextures();
 	void initWithGivenMatrix(std::ifstream& m_ifile);
 	void Draw(sf::RenderWindow& m_window);
 	enum texture { WALL = 0, DOOR, CAT, MOUSE, CHEESE, PRESENT, KEY, ERASE, RESET, SAVE,SIZE};
@@ -35,7 +33,6 @@ private:
 	int m_row;
 	int m_col;
 	std::vector< Row> m_matrixVector;
-	sf::RectangleShape* m_cellBoard;
 	sf::RectangleShape m_rec;
 	sf::Texture m_textures[texture::SIZE]; // the board textures
 

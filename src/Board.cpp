@@ -5,13 +5,18 @@
 
 Board::Board()
 {
-    m_textures[WALL].loadFromFile("wall.jpg");
+    m_row=0;
+    m_col=0;
+    m_textures[WALL].loadFromFile("wall.png");
     m_textures[DOOR].loadFromFile("door.png");
     m_textures[CAT].loadFromFile("cat.png");
     m_textures[MOUSE].loadFromFile("mouse.png");
-    m_textures[CHEESE].loadFromFile("sheese.png");
+    m_textures[CHEESE].loadFromFile("cheese.png");
     m_textures[PRESENT].loadFromFile("present.png");
     m_textures[KEY].loadFromFile("key.png");
+    m_textures[SAVE].loadFromFile("save.png");
+    m_textures[RESET].loadFromFile("reset.png");
+    m_textures[ERASE].loadFromFile("erase.png");
 
 }
 void Board::initMatrix()

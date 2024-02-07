@@ -1,6 +1,7 @@
 cmake_minimum_required (VERSION 3.26)
 
 project (oop1_ex03)
+set (COURSE_EXAMPLE ON)
 set (MY_AUTHORS "")
 
 include (cmake/CompilerSettings.cmake)

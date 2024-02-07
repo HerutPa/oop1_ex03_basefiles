@@ -17,7 +17,7 @@ public:
 
 
 private:
-    ToolBar m_ToolBar;
+    ToolBar m_toolBar;
     Board m_board;
     sf::RenderWindow m_window;
     sf::Texture m_background;
