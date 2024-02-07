@@ -23,13 +23,6 @@ void Board::initMatrix()
 	{
 		Row temp_row(m_col); //יצירת שורה ריקה
 		row.operator= (temp_row); //הכנסו את השורה לתוך הוקטור
-
-		/*std::vector < char > vector_row;
-		for (int col = 0; col < m_col; ++col)
-		{
-			vector_row.push_back(' ');
-		}
-		m_matrix.push_back(vector_row);*/
 	}
 }
 

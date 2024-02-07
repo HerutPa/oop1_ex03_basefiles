@@ -23,7 +23,7 @@ private:
     sf::Texture m_background;
     std::ifstream m_ifile = std::ifstream("Board.txt");
     std::ofstream m_ofile;
-    std::vector<std::vector<Row>> m_matrixVector;
+    //std::vector<std::vector<Row>> m_matrixVector;
 
     //ToolBar m_ToolBar;
 };

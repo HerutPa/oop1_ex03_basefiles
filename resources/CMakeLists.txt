@@ -1,2 +1,13 @@
 ﻿#configure_file ("Wall.png" ${CMAKE_BINARY_DIR} COPYONLY)
 configure_file ("background.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("Wall.jpg" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("door.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("cat.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("mouse.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("cookie.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("present.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("key.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("erase.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("reset.png" ${CMAKE_BINARY_DIR} COPYONLY)
+configure_file ("save.jpg" ${CMAKE_BINARY_DIR} COPYONLY)
+

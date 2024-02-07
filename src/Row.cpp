@@ -27,16 +27,6 @@ Row::Row(int size)
     {
         m_char[i] = ' ';
     }
-    ////m_cell = new sf::RectangleShape[size]();
-    //for (int i = 0; i < m_size; i++)
-    //{
-    //    auto startPosition = value.getPosition();
-    //    auto cellsize = value.getSize();
-
-    //    m_cell[i] = value;
-    //    m_cell[i].setPosition(startPosition.x + cellsize.x * i, startPosition.y);
-
-    //}
 }
 
 
