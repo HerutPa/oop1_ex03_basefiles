@@ -16,7 +16,7 @@ Board::Board(int row, int col)
 	    Row m_cellBoard(getCol(), getMRec());
 		m_matrixVector[row].push_back(m_cellBoard);
 		InitTextures();
-		ó
+		
 	}
 }
 
@@ -29,6 +29,23 @@ void Board::InitTextures()
 	//m_textures[CHEESE].loadFromFile("sheese.png");
 	//m_textures[PRESENT].loadFromFile("present.png");
 	//m_textures[KEY].loadFromFile("key.png");
+}
+
+void Board::initWithGivenMatrix(std::ifstream &m_ifile)
+{
+	m_ifile.get(); // for \n
+
+	for (int row = 0; row < m_row; ++row)
+	{
+		m_rec.setSize((sf::Vector2f(50.f, 50.f)));
+		//auto rec = sf::RectangleShape(SIZE_OF_CELL);
+		m_rec.setOutlineColor(sf::Color::Color(102, 102, 102));
+		m_rec.setOutlineThickness(1.f);
+		m_rec.setFillColor(sf::Color::Transparent);
+
+		Row m_cellBoard(m_col, m_rec);
+		m_matrixVector[row].push_back(m_cellBoard);
+	}
 }
 
 const sf::RectangleShape Board::CreateRectangle(const int row, const int col) const
@@ -98,3 +115,4 @@ void Board::initMatrix()
 		m_matrix.push_back(vector_row);*/
 	}
 }
+

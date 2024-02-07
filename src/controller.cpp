@@ -30,7 +30,7 @@ void Controller::init()
         m_ifile >> row >> col;
         m_board.SetRow(row);
         m_board.SetCol(col);
-        initWithGivenMatrix();//reset the matrix with the file
+        m_board.initWithGivenMatrix(m_ifile);//reset the matrix with the file
     }
     else
     {
@@ -38,29 +38,10 @@ void Controller::init()
         m_board.initMatrix();
     }
 
-    m_board.init();
+    //m_board.init();
     m_window.setSize(sf::Vector2u(1200, 900));
     m_ToolBar.SetSize(200, 900);
     //m_ToolBar.init();
-}
-
-void Controller::initWithGivenMatrix()
-{
-    m_ifile.get(); // for \n
-
-    m_board.readBoard();
-    for (int row = 0; row < m_board.getRow(); ++row)
-    {
-        m_board.getMRec().setSize((sf::Vector2f(50.f, 50.f)));
-        //auto rec = sf::RectangleShape(SIZE_OF_CELL);
-        m_board.getMRec().setOutlineColor(sf::Color::Color(102, 102, 102));
-        m_board.getMRec().setOutlineThickness(1.f);
-        m_board.getMRec().setFillColor(sf::Color::Transparent);
-
-        Row m_cellBoard(m_board.getCol(), m_board.getMRec());
-        m_matrixVector[row].push_back(m_cellBoard);
-    }
-
 }
 //void Controller::initMatrix()
 //{

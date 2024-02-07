@@ -26,9 +26,5 @@ private:
     std::ofstream m_ofile;
     std::vector<std::vector<Row>> m_matrixVector;
 
-    void initWithGivenMatrix();
-
-    void initMatrix();
-
     //ToolBar m_ToolBar;
 };

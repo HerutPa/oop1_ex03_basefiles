@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Row.h"
 #include <row.idl>
+//#include <fstream>
 
 enum texture { WALL = 0, DOOR, CAT, MOUSE, CHEESE, PRESENT, KEY, ERASE, RESET, SAVE };
 
@@ -25,6 +26,8 @@ public:
 	void init();
 
 	void InitTextures();
+	void initWithGivenMatrix(std::ifstream& m_ifile);
+
 
 
 private:
@@ -34,5 +37,6 @@ private:
 	sf::RectangleShape* m_cellBoard;
 	sf::RectangleShape m_rec;
 	sf::Texture m_textures[7]; // the board textures
+
 
 };
